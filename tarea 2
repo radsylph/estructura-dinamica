@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	float*matriz;
+	float sumatoria =0;
+	int x,y,z;
+	
+	
+	printf("ingrese la cantidad de compra que hizo hoy\n");
+	scanf("%d" ,&x);
+	matriz=(float*)calloc(x,sizeof(int));
+	 for(int i=1;i<x+1;i++)
+    {
+        printf("ingrese el precio de la compra numero %d :",i);
+        scanf("%f",&matriz[i]);
+    }
+    for (int j=1; j<x+1; j++)
+    {
+    	float valora =matriz[j];
+    	sumatoria = valora + sumatoria;
+	}
+	printf("el valor total de la compra fue %2.f" ,sumatoria);
+
+
+	
+	free(matriz);
+	return 0;
+}
